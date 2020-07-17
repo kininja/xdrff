@@ -3,6 +3,11 @@ XDR query results reformatter
 
 The xdrff python script fixes the timestamp field in the tab-separated file XDR query results outputs. Without doing this, it’s really hard to sort events by time. 
 
+Example usage:
+
+ python3 xdrff.py -i '.\QUERY-380 - 2020_03_31.tsv' -o query380.tsv
+
+
 Example problem and solution is below in the code snippet (from the xdrff.fix.__doc__). The output format is still tab-separated as there are multiple fields with commas and quotes which would otherwise be lost if converting to csv. 
 
 
